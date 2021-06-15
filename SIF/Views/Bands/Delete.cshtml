@@ -1,0 +1,31 @@
+﻿@model SIF.Models.Band
+
+@{
+    ViewData["Title"] = "Borrar";
+}
+
+<h1>Delete</h1>
+<h5>Are you sure you want delete this band?</h5>
+<hr />
+
+<div>
+    <h4>Band</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BandName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BandName)
+        </dd>
+    </dl>
+</div>
+
+<div>
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="BandId" />
+        <input type="submit" class="btn btn-outline-danger" value="Delete" />
+        <a asp-action="Index" class="btn btn-outline-dark">Go Back</a>
+    </form>
+
+</div>

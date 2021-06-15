@@ -1,0 +1,46 @@
+﻿@*Created by agqb*@
+
+
+@model IEnumerable<SIF.Models.Band>
+
+@{
+    ViewData["Title"] = "Bands";
+}
+
+<div class="row justify-content-md-center">
+
+    <h2>List of Bands</h2>
+</div>
+<hr />
+<div class="row justify-content-md-center">
+
+    <p>
+        <a asp-action="Create" class="btn btn-outline-dark btn-lg">Add a new band</a>
+    </p>
+</div>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.BandName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.BandName)</td>
+                <td>
+                    @*Erase/Edit/Detail*@
+                    <a asp-action="Edit" class="btn btn-outline-info" asp-route-id="@item.BandId">Edit</a>
+                    <a asp-action="Details" class="btn btn-outline-secondary" asp-route-id="@item.BandId">Details</a>
+                    <a asp-action="Delete" class="btn btn-outline-warning" asp-route-id="@item.BandId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
