@@ -1,7 +1,7 @@
 # CRUD-SIF
 Initial elements of CRUD - Bands.
 
-##Descripcion de la asignacion: 
+## Descripcion de la asignacion: 
 Dentro del repositorio se encuentran los elementos que conforman las siguientes acciones:
 Creacion de una banda nueva.
 Leer las bandas ya agregadas.
